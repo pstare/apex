@@ -7,6 +7,6 @@ defmodule Apex do
   def ap(data, options \\ []) do
     formatted = Apex.Format.format(data, options)
     IO.puts(formatted)
-    data
+    # data
   end
 end
