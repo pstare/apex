@@ -9,4 +9,9 @@ defmodule Apex do
     IO.puts(formatted)
     # data
   end
+
+  def apn(data, options \\ []) do
+    data |>
+      ap(options |> Keyword.merge(numbers: false))
+  end
 end

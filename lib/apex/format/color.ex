@@ -17,8 +17,8 @@ defmodule Apex.Format.Color do
   defp color(false),                       do: [IO.ANSI.color(198), :normal]
   defp color(nil),                         do: :red
   defp color(data) when is_atom(data),     do: [IO.ANSI.color(133), :normal]
-  defp color(data) when is_float(data),    do: [IO.ANSI.color(81), :normal]
-  defp color(data) when is_integer(data),  do: [IO.ANSI.color(81), :normal]
+  defp color(data) when is_float(data),    do: [IO.ANSI.color(80), :normal]
+  defp color(data) when is_integer(data),  do: [IO.ANSI.color(80), :normal]
   defp color(data) when is_function(data), do: [IO.ANSI.color(162), :normal]
   defp color(data) when is_list(data),     do: :white
   defp color(data) when is_pid(data),      do: :yellow
