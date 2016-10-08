@@ -7,11 +7,22 @@ defmodule Apex do
   def ap(data, options \\ []) do
     formatted = Apex.Format.format(data, options)
     IO.puts(formatted)
-    # data
+    # Don't actually return the data
+  end
+
+  def apr(data, options \\[]) do
+    ap(data, options)
+    data
   end
 
   def apn(data, options \\ []) do
-    data |>
-      ap(options |> Keyword.merge(numbers: false))
+    data
+    |> ap(options |> Keyword.merge(numbers: false))
   end
+
+  def aprn(data, options \\ []) do
+    data
+    |> apr(options |> Keyword.merge(numbers: false))
+  end
+
 end
