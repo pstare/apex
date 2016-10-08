@@ -10,6 +10,11 @@ defmodule Apex do
     # Don't actually return the data
   end
 
+  def aapn(data, annotation, options \\[]) do
+    IO.puts "--> #{annotation}"
+    apn(data, options)
+  end
+
   def apn(data, options \\ []) do
     data
     |> ap(options |> Keyword.merge(numbers: false))
@@ -20,7 +25,7 @@ defmodule Apex do
     data
   end
 
-  def apar(data, annotation, options \\[]) do
+  def aapr(data, annotation, options \\[]) do
     IO.puts "--> #{annotation}"
     apr(data, options)
   end
@@ -30,10 +35,9 @@ defmodule Apex do
     |> apr(options |> Keyword.merge(numbers: false))
   end
 
-  def aparn(data, annotation, options \\[]) do
+  def aaprn(data, annotation, options \\[]) do
     IO.puts "--> #{annotation}"
-    data
-    |> apr(options |> Keyword.merge(numbers: false))
+    aprn(data, options)
   end
 
 end
