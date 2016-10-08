@@ -32,6 +32,7 @@ defmodule Apex do
 
   def aparn(data, annotation, options \\[]) do
     IO.puts "--> #{annotation}"
+    data
     |> apr(options |> Keyword.merge(numbers: false))
   end
 
